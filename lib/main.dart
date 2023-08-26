@@ -1,23 +1,43 @@
+import 'package:car_catalog/bloc/blocs/blocs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import 'bloc/bloc.dart';
+import 'routes/routes.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+
+  MyRouter myRouter = MyRouter();
+
+  runApp(MyApp(
+    router: myRouter.router,
+  ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final GoRouter router;
+
+  const MyApp({super.key, required this.router});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return BlocProvider(
+      create: (context) => ApplicationBloc(),
+      child: ScreenUtilInit(
+        designSize: const Size(375, 812),
+        builder: (context, state) {
+          return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            routeInformationProvider: router.routeInformationProvider,
+            routeInformationParser: router.routeInformationParser,
+            routerDelegate: router.routerDelegate,
+          );
+        },
       ),
-      home: const Center(child: Text("Welcome"),),
     );
   }
 }
