@@ -5,7 +5,7 @@ import 'package:car_catalog/ui/ui.dart';
 
 class MyRouter {
   final GlobalKey<NavigatorState> _rootNavigatorKey =
-  GlobalKey<NavigatorState>();
+      GlobalKey<NavigatorState>();
 
   late final GoRouter router = GoRouter(
     initialLocation: '/home',
@@ -23,9 +23,7 @@ class MyRouter {
             path: '/home',
             pageBuilder: (context, state) {
               return const NoTransitionPage(
-                child: Center(
-                  child: Text("Home", style: TextStyle(color: ColorProvider.mainText),),
-                ),
+                child: HomeScreen(),
               );
             },
           ),
@@ -35,7 +33,10 @@ class MyRouter {
             pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: Center(
-                  child: Text("Favourite", style: TextStyle(color: ColorProvider.mainText),),
+                  child: Text(
+                    "Favourite",
+                    style: TextStyle(color: ColorProvider.mainText),
+                  ),
                 ),
               );
             },
@@ -46,7 +47,10 @@ class MyRouter {
             pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: Center(
-                  child: Text("Settings", style: TextStyle(color: ColorProvider.mainText),),
+                  child: Text(
+                    "Settings",
+                    style: TextStyle(color: ColorProvider.mainText),
+                  ),
                 ),
               );
             },

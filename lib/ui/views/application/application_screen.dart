@@ -15,13 +15,22 @@ class Application extends StatefulWidget {
 class _ApplicationState extends State<Application> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 375.w,
-      height: 812.h,
-      child: Scaffold(
-        backgroundColor: ColorProvider.mainBackground,
-        bottomNavigationBar: bottomNavigationBarWidget(),
-        body: widget.child,
+    return Scaffold(
+      backgroundColor: ColorProvider.mainBackground,
+      body: SizedBox(
+        height: 812.h,
+        width: 375.w,
+        child: Stack(
+          children: [
+            widget.child,
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: bottomNavigationBarWidget(),
+            ),
+          ],
+        ),
       ),
     );
   }

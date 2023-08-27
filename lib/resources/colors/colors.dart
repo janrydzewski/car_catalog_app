@@ -10,8 +10,8 @@ class ColorProvider{
 
   static const thirdElement = Color(0xFF9F9DA5);
 
-  static const fourthElement = Color(0xFF333148);
+  static const fourthElement = Color(0xFF36353C);
 
-  static const mainBackground = Color(0xFF15141F);
+  static const mainBackground = Color(0xFF141718);
 
 }
