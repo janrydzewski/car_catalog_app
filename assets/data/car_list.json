@@ -3,267 +3,1903 @@
     {
       "id": 1,
       "logo": "https://www.carlogos.org/car-logos/abarth-logo.png",
-      "name": "Abarth"
+      "name": "Abarth",
+      "models": [
+        {
+          "id": 1,
+          "model": "500",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "595",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "695",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 2,
       "logo": "https://www.carlogos.org/car-logos/acura-logo.png",
-      "name": "Acura"
+      "name": "Acura",
+      "models": [
+        {
+          "id": 1,
+          "model": "ILX",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "TLX",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "RLX",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "RDX",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "MDX",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "NSX",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 3,
       "logo": "https://www.carlogos.org/car-logos/alfa-romeo-logo.png",
-      "name": "Alfa Romeo"
+      "name": "Alfa Romeo",
+      "models": [
+        {
+          "id": 1,
+          "model": "Giulia",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Stelvio",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "4C",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 4,
       "logo": "https://www.carlogos.org/car-logos/aston-martin-logo.png",
-      "name": "Aston Martin"
+      "name": "Aston Martin",
+      "models": [
+        {
+          "id": 1,
+          "model": "Vantage",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "DB11",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "DBS Superleggera",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Rapide",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Valhalla",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 5,
       "logo": "https://www.carlogos.org/car-logos/audi-logo.png",
-      "name": "Audi"
+      "name": "Audi",
+      "models": [
+        {
+          "id": 1,
+          "model": "A1",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "A3",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "A4",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "A5",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "A6",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "A7",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "A8",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "Q2",
+          "url": ""
+        },
+        {
+          "id": 9,
+          "model": "Q3",
+          "url": ""
+        },
+        {
+          "id": 10,
+          "model": "Q4",
+          "url": ""
+        },
+        {
+          "id": 11,
+          "model": "Q5",
+          "url": ""
+        },
+        {
+          "id": 12,
+          "model": "Q6",
+          "url": ""
+        },
+        {
+          "id": 13,
+          "model": "Q7",
+          "url": ""
+        },
+        {
+          "id": 14,
+          "model": "Q8",
+          "url": ""
+        },
+        {
+          "id": 15,
+          "model": "e-tron",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 6,
       "logo": "https://www.carlogos.org/car-logos/bentley-logo.png",
-      "name": "Bentley"
+      "name": "Bentley",
+      "models": [
+        {
+          "id": 1,
+          "model": "Continental GT",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Flying Spur",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Mulsanne",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Bentayga",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 7,
       "logo": "https://www.carlogos.org/car-logos/bmw-logo.png",
-      "name": "BMW"
+      "name": "BMW",
+      "models": [
+        {
+          "id": 1,
+          "model": "1 Series",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "2 Series",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "3 Series",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "4 Series",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "5 Series",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "6 Series",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "7 Series",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "8 Series",
+          "url": ""
+        },
+        {
+          "id": 9,
+          "model": "X1",
+          "url": ""
+        },
+        {
+          "id": 10,
+          "model": "X2",
+          "url": ""
+        },
+        {
+          "id": 11,
+          "model": "X3",
+          "url": ""
+        },
+        {
+          "id": 12,
+          "model": "X4",
+          "url": ""
+        },
+        {
+          "id": 13,
+          "model": "X5",
+          "url": ""
+        },
+        {
+          "id": 14,
+          "model": "X6",
+          "url": ""
+        },
+        {
+          "id": 15,
+          "model": "X7",
+          "url": ""
+        },
+        {
+          "id": 16,
+          "model": "i3",
+          "url": ""
+        },
+        {
+          "id": 17,
+          "model": "i4",
+          "url": ""
+        },
+        {
+          "id": 18,
+          "model": "iX",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 8,
       "logo": "https://www.carlogos.org/car-logos/bugatti-logo.png",
-      "name": "Bugatti"
+      "name": "Bugatti",
+      "models": [
+        {
+          "id": 1,
+          "model": "Chiron",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Divo",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "La Voiture Noire",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Centodieci",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 9,
       "logo": "https://www.carlogos.org/car-logos/cadillac-logo.png",
-      "name": "Cadillac"
+      "name": "Cadillac",
+      "models": [
+        {
+          "id": 1,
+          "model": "ATS",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "CT4",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "CTS",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "CT5",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "XT4",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "XT5",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "XT6",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "Escalade",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 10,
       "logo": "https://www.carlogos.org/car-logos/chevrolet-logo.png",
-      "name": "Chevrolet"
+      "name": "Chevrolet",
+      "models": [
+        {
+          "id": 1,
+          "model": "Spark",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Cruze",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Malibu",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Impala",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Camaro",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Corvette",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Trax",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "Equinox",
+          "url": ""
+        },
+        {
+          "id": 9,
+          "model": "Blazer",
+          "url": ""
+        },
+        {
+          "id": 10,
+          "model": "Traverse",
+          "url": ""
+        },
+        {
+          "id": 11,
+          "model": "Tahoe",
+          "url": ""
+        },
+        {
+          "id": 12,
+          "model": "Suburban",
+          "url": ""
+        },
+        {
+          "id": 13,
+          "model": "Silverado",
+          "url": ""
+        },
+        {
+          "id": 14,
+          "model": "Colorado",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 11,
       "logo": "https://www.carlogos.org/car-logos/chrysler-logo.png",
-      "name": "Chrysler"
+      "name": "Chrysler",
+      "models": [
+        {
+          "id": 1,
+          "model": "300",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Pacifica",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 12,
       "logo": "https://www.carlogos.org/car-logos/citroen-logo.png",
-      "name": "Citroën"
+      "name": "Citroën",
+      "models": [
+        {
+          "id": 1,
+          "model": "C1",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "C3",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "C4",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "C5",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Berlingo",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "C3 Aircross",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "C4 Cactus",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "C5 Aircross",
+          "url": ""
+        },
+        {
+          "id": 9,
+          "model": "SpaceTourer",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 13,
       "logo": "https://www.carlogos.org/car-logos/corvette-logo.png",
-      "name": "Corvette"
+      "name": "Corvette",
+      "models": [
+        {
+          "id": 1,
+          "model": "Stingray",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Grand Sport",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Z06",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "ZR1",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 14,
       "logo": "https://www.carlogos.org/car-logos/dacia-logo.png",
-      "name": "Dacia"
+      "name": "Dacia",
+      "models": [
+        {
+          "id": 1,
+          "model": "Sandero",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Logan",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Duster",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Lodgy",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Dokker",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 15,
       "logo": "https://www.carlogos.org/car-logos/dodge-logo.png",
-      "name": "Dodge"
+      "name": "Dodge",
+      "models": [
+        {
+          "id": 1,
+          "model": "Challenger",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Charger",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Durango",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Journey",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 16,
       "logo": "https://www.carlogos.org/car-logos/ferrari-logo.png",
-      "name": "Ferrari"
+      "name": "Ferrari",
+      "models": [
+        {
+          "id": 1,
+          "model": "Portofino",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Roma",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "812 Superfast",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "SF90 Stradale",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "F8 Tributo",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "488 Pista",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "GTC4Lusso",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 17,
       "logo": "https://www.carlogos.org/car-logos/fiat-logo.png",
-      "name": "Fiat"
+      "name": "Fiat",
+      "models": [
+        {
+          "id": 1,
+          "model": "500",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "500X",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "500L",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Panda",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Tipo",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 18,
       "logo": "https://www.carlogos.org/car-logos/ford-logo.png",
-      "name": "Ford"
+      "name": "Ford",
+      "models": [
+        {
+          "id": 1,
+          "model": "Fiesta",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Focus",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Mondeo",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Mustang",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Escape",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Explorer",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Edge",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "Ranger",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 19,
       "logo": "https://www.carlogos.org/car-logos/gmc-logo.png",
-      "name": "GMC"
+      "name": "GMC",
+      "models": [
+        {
+          "id": 1,
+          "model": "Terrain",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Acadia",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Yukon",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Sierra",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 20,
       "logo": "https://www.carlogos.org/car-logos/honda-logo.png",
-      "name": "Honda"
+      "name": "Honda",
+      "models": [
+        {
+          "id": 1,
+          "model": "Civic",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Accord",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "CR-V",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Pilot",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Fit",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "HR-V",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Insight",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "Odyssey",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 21,
       "logo": "https://www.carlogos.org/car-logos/hyundai-logo.png",
-      "name": "Hyundai"
+      "name": "Hyundai",
+      "models": [
+        {
+          "id": 1,
+          "model": "Accent",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Elantra",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Sonata",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Kona",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Tucson",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Santa Fe",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Palisade",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 22,
       "logo": "https://www.carlogos.org/car-logos/infiniti-logo.png",
-      "name": "Infiniti"
+      "name": "Infiniti",
+      "models": [
+        {
+          "id": 1,
+          "model": "Q50",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Q60",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "QX50",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "QX60",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "QX80",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 23,
       "logo": "https://www.carlogos.org/car-logos/jaguar-logo.png",
-      "name": "Jaguar"
+      "name": "Jaguar",
+      "models": [
+        {
+          "id": 1,
+          "model": "XE",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "XF",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "XJ",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "F-PACE",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "E-PACE",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "I-PACE",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 24,
       "logo": "https://www.carlogos.org/car-logos/jeep-logo.png",
-      "name": "Jeep"
+      "name": "Jeep",
+      "models": [
+        {
+          "id": 1,
+          "model": "Renegade",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Compass",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Cherokee",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Grand Cherokee",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Wrangler",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Gladiator",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 25,
       "logo": "https://www.carlogos.org/car-logos/kia-logo.png",
-      "name": "Kia"
+      "name": "Kia",
+      "models": [
+        {
+          "id": 1,
+          "model": "Picanto",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Rio",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Ceed",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Optima",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Stinger",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Seltos",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Sportage",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "Sorento",
+          "url": ""
+        },
+        {
+          "id": 9,
+          "model": "Telluride",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 26,
       "logo": "https://www.carlogos.org/car-logos/koenigsegg-logo.png",
-      "name": "Koenigsegg"
+      "name": "Koenigsegg",
+      "models": [
+        {
+          "id": 1,
+          "model": "Jesko",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Gemera",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Regera",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Agera RS",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 27,
       "logo": "https://www.carlogos.org/car-logos/lamborghini-logo.png",
-      "name": "Lamborghini"
+      "name": "Lamborghini",
+      "models": [
+        {
+          "id": 1,
+          "model": "Huracán",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Aventador",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Urus",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Sian",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 28,
       "logo": "https://www.carlogos.org/car-logos/lancia-logo.png",
-      "name": "Lancia"
+      "name": "Lancia",
+      "models": [
+        {
+          "id": 1,
+          "model": "Ypsilon",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 29,
       "logo": "https://www.carlogos.org/car-logos/land-rover-logo.png",
-      "name": "Land Rover"
+      "name": "Land Rover",
+      "models": [
+        {
+          "id": 1,
+          "model": "Defender",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Discovery Sport",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Discovery",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Range Rover Evoque",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Range Rover Velar",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Range Rover Sport",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Range Rover",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 30,
       "logo": "https://www.carlogos.org/car-logos/lexus-logo.png",
-      "name": "Lexus"
+      "name": "Lexus",
+      "models": [
+        {
+          "id": 1,
+          "model": "ES",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "IS",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "LS",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "NX",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "RX",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "UX",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "LC",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "RC",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 31,
       "logo": "https://www.carlogos.org/car-logos/maserati-logo.png",
-      "name": "Maserati"
+      "name": "Maserati",
+      "models": [
+        {
+          "id": 1,
+          "model": "Ghibli",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Quattroporte",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Levante",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "MC20",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 32,
       "logo": "https://www.carlogos.org/car-logos/maybach-logo.png",
-      "name": "Maybach"
+      "name": "Maybach",
+      "models": [
+        {
+          "id": 1,
+          "model": "S-Class",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "GLS",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 33,
       "logo": "https://www.carlogos.org/car-logos/mazda-logo.png",
-      "name": "Mazda"
+      "name": "Mazda",
+      "models": [
+        {
+          "id": 1,
+          "model": "Mazda3",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Mazda6",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "CX-3",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "CX-30",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "CX-5",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "CX-9",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 34,
       "logo": "https://www.carlogos.org/car-logos/mclaren-logo.png",
-      "name": "McLaren"
+      "name": "McLaren",
+      "models": [
+        {
+          "id": 1,
+          "model": "570S",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "720S",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "GT",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Senna",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Artura",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 35,
       "logo": "https://www.carlogos.org/car-logos/mercedes-benz-logo.png",
-      "name": "Mercedes-Benz"
+      "name": "Mercedes-Benz",
+      "models": [
+        {
+          "id": 1,
+          "model": "A-Class",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "C-Class",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "E-Class",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "S-Class",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "GLA",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "GLC",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "GLE",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "GLS",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 36,
       "logo": "https://www.carlogos.org/car-logos/mini-logo.png",
-      "name": "Mini"
+      "name": "Mini",
+      "models": [
+        {
+          "id": 1,
+          "model": "Hardtop 2 Door",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Hardtop 4 Door",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Countryman",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Clubman",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Convertible",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 37,
       "logo": "https://www.carlogos.org/car-logos/mitsubishi-logo.png",
-      "name": "Mitsubishi"
+      "name": "Mitsubishi",
+      "models": [
+        {
+          "id": 1,
+          "model": "Mirage",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Outlander Sport",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Outlander",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Eclipse Cross",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "logo": "https://www.carlogos.org/car-logos/nissan-logo.png",
+      "name": "Nissan",
+      "models": [
+        {
+          "id": 1,
+          "model": "Altima",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Maxima",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Sentra",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Versa",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Rogue",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Murano",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Pathfinder",
+          "url": ""
+        },
+        {
+          "id": 8,
+          "model": "Armada",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 39,
-      "logo": "https://www.carlogos.org/car-logos/nissan-logo.png",
-      "name": "Nissan"
+      "logo": "https://www.carlogos.org/car-logos/opel-logo.png",
+      "name": "Opel",
+      "models": [
+        {
+          "id": 1,
+          "model": "Corsa",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Astra",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Insignia",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Crossland",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Grandland",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 40,
-      "logo": "https://www.carlogos.org/car-logos/opel-logo.png",
-      "name": "Opel"
+      "logo": "https://www.carlogos.org/car-logos/pagani-logo.png",
+      "name": "Pagani",
+      "models": [
+        {
+          "id": 1,
+          "model": "Huayra",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Huayra Roadster",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Huayra BC",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 41,
-      "logo": "https://www.carlogos.org/car-logos/pagani-logo.png",
-      "name": "Pagani"
+      "logo": "https://www.carlogos.org/car-logos/peugeot-logo.png",
+      "name": "Peugeot",
+      "models": [
+        {
+          "id": 1,
+          "model": "208",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "308",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "508",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "2008",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "3008",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "5008",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 42,
-      "logo": "https://www.carlogos.org/car-logos/peugeot-logo.png",
-      "name": "Peugeot"
+      "logo": "https://www.carlogos.org/car-logos/porsche-logo.png",
+      "name": "Porsche",
+      "models": [
+        {
+          "id": 1,
+          "model": "911",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Cayman",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Panamera",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Macan",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Cayenne",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 43,
-      "logo": "https://www.carlogos.org/car-logos/porsche-logo.png",
-      "name": "Porsche"
+      "logo": "https://www.carlogos.org/car-logos/renault-logo.png",
+      "name": "Renault",
+      "models": [
+        {
+          "id": 1,
+          "model": "Clio",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Megane",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Captur",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Kadjar",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Talisman",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 44,
-      "logo": "https://www.carlogos.org/car-logos/renault-logo.png",
-      "name": "Renault"
+      "logo": "https://www.carlogos.org/car-logos/rolls-royce-logo.png",
+      "name": "Rolls Royce",
+      "models": [
+        {
+          "id": 1,
+          "model": "Phantom",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Cullinan",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Ghost",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Wraith",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 45,
-      "logo": "https://www.carlogos.org/car-logos/rolls-royce-logo.png",
-      "name": "Rolls Royce"
+      "logo": "https://www.carlogos.org/car-logos/saab-logo.png",
+      "name": "Saab",
+      "models": [
+        {
+          "id": 1,
+          "model": "9-3",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "9-5",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 46,
-      "logo": "https://www.carlogos.org/car-logos/saab-logo.png",
-      "name": "Saab"
+      "logo": "https://www.carlogos.org/car-logos/seat-logo.png",
+      "name": "Seat",
+      "models": [
+        {
+          "id": 1,
+          "model": "Ibiza",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Leon",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Arona",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Ateca",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Tarraco",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 47,
-      "logo": "https://www.carlogos.org/car-logos/seat-logo.png",
-      "name": "Seat"
+      "logo": "https://www.carlogos.org/car-logos/skoda-logo.png",
+      "name": "Skoda",
+      "models": [
+        {
+          "id": 1,
+          "model": "Octavia",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Superb",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Kodiaq",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Karoq",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Enyaq",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 48,
-      "logo": "https://www.carlogos.org/car-logos/skoda-logo.png",
-      "name": "Skoda"
+      "logo": "https://www.carlogos.org/car-logos/subaru-logo.png",
+      "name": "Subaru",
+      "models": [
+        {
+          "id": 1,
+          "model": "Impreza",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Legacy",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Outback",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Forester",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Crosstrek",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 49,
-      "logo": "https://www.carlogos.org/car-logos/subaru-logo.png",
-      "name": "Subaru"
+      "logo": "https://www.carlogos.org/car-logos/suzuki-logo.png",
+      "name": "Suzuki",
+      "models": [
+        {
+          "id": 1,
+          "model": "Swift",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Vitara",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Jimny",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "S-Cross",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 50,
-      "logo": "https://www.carlogos.org/car-logos/suzuki-logo.png",
-      "name": "Suzuki"
+      "logo": "https://www.carlogos.org/car-logos/tesla-logo.png",
+      "name": "Tesla",
+      "models": [
+        {
+          "id": 1,
+          "model": "Model 3",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Model S",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Model X",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Model Y",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 51,
-      "logo": "https://www.carlogos.org/car-logos/tesla-logo.png",
-      "name": "Tesla"
+      "logo": "https://www.carlogos.org/car-logos/toyota-logo.png",
+      "name": "Toyota",
+      "models": [
+        {
+          "id": 1,
+          "model": "Corolla",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Camry",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "RAV4",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Highlander",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "4Runner",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Tacoma",
+          "url": ""
+        },
+        {
+          "id": 7,
+          "model": "Prius",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 52,
-      "logo": "https://www.carlogos.org/car-logos/toyota-logo.png",
-      "name": "Toyota"
+      "logo": "https://www.carlogos.org/car-logos/volkswagen-logo.png",
+      "name": "Volkswagen",
+      "models": [
+        {
+          "id": 1,
+          "model": "Golf",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "Passat",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "Jetta",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "Tiguan",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "Atlas",
+          "url": ""
+        },
+        {
+          "id": 6,
+          "model": "Arteon",
+          "url": ""
+        }
+      ]
     },
     {
       "id": 53,
-      "logo": "https://www.carlogos.org/car-logos/volkswagen-logo.png",
-      "name": "Volkswagen"
-    },
-    {
-      "id": 54,
       "logo": "https://www.carlogos.org/car-logos/volvo-logo.png",
-      "name": "Volvo"
+      "name": "Volvo",
+      "models": [
+        {
+          "id": 1,
+          "model": "S60",
+          "url": ""
+        },
+        {
+          "id": 2,
+          "model": "S90",
+          "url": ""
+        },
+        {
+          "id": 3,
+          "model": "XC40",
+          "url": ""
+        },
+        {
+          "id": 4,
+          "model": "XC60",
+          "url": ""
+        },
+        {
+          "id": 5,
+          "model": "XC90",
+          "url": ""
+        }
+      ]
     }
   ]
 }

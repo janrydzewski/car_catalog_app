@@ -6,6 +6,8 @@ class ColorProvider{
 
   static const secondaryText = Color(0xFF979797);
 
+  static const thirdText = Color(0xFF2F2F2F);
+
   static const mainElement = Color(0xFF38ADEF);
 
   static const secondaryElement = Color(0xFF4066E7);

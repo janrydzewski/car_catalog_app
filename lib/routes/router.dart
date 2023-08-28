@@ -1,3 +1,4 @@
+import 'package:car_catalog/data/models/models.dart';
 import 'package:car_catalog/resources/resources.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
@@ -26,6 +27,18 @@ class MyRouter {
                 child: HomeScreen(),
               );
             },
+            routes: <RouteBase>[
+              GoRoute(
+                  name: 'Brand',
+                  path: 'brand',
+                  pageBuilder: (context, state) {
+                    final carBrand = state.extra as BrandModel;
+                    return NoTransitionPage(
+                      child: BrandScreen(brandModel: carBrand),
+                    );
+                  },
+              ),
+            ]
           ),
           GoRoute(
             name: 'Favourite',

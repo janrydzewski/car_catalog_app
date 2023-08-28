@@ -21,13 +21,12 @@ class CarBrandRepository {
   }
 
   Future<List<BrandModel>> getCarBrandSearchedList(String searchingText) async {
-
     final carBrandList = await getCarBrandList();
 
     final List<BrandModel> searchedCarBrandList = [];
 
-    for(var car in carBrandList){
-      if(car.name.toLowerCase().contains(searchingText.toLowerCase())){
+    for (var car in carBrandList) {
+      if (car.name.toLowerCase().contains(searchingText.toLowerCase())) {
         searchedCarBrandList.add(car);
       }
     }

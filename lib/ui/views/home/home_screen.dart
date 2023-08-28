@@ -49,6 +49,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         );
                   },
                 ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  margin: EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
+                  child: reusableText(
+                    "All brands",
+                    fontSize: 16,
+                    fontColor: ColorProvider.thirdText,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1,
+                  ),
+                ),
                 Expanded(
                   child: BlocBuilder<CarBrandBloc, CarBrandState>(
                     builder: (context, state) {
