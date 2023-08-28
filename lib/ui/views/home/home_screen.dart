@@ -47,8 +47,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       EdgeInsets.symmetric(horizontal: 30.w, vertical: 15.h),
                   child: TextFormField(
                     controller: textEditingController,
+                    cursorColor: ColorProvider.fourthElement,
                     decoration: InputDecoration(
                       hintText: "Search",
+                      border: InputBorder.none,
+                      hoverColor: ColorProvider.fourthElement,
                       enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(
                           width: 2,
