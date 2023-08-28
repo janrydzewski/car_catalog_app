@@ -1,7 +1,6 @@
 import 'package:car_catalog/resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'dart:ui';
 
 import 'package:google_fonts/google_fonts.dart';
 
