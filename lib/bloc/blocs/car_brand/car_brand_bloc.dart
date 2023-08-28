@@ -14,6 +14,7 @@ class CarBrandBloc extends Bloc<CarBrandEvent, CarBrandState> {
 
   CarBrandBloc({required this.carBrandRepository}) : super(CarBrandState()) {
     on<GetCarBrandEvent>(_onGetCarBrandEvent);
+    on<GetCarBrandSearchedEvent>(_onGetCarBrandSearchedEvent);
   }
 
   _onGetCarBrandEvent(
@@ -21,6 +22,17 @@ class CarBrandBloc extends Bloc<CarBrandEvent, CarBrandState> {
     emit(CarBrandLoading());
     try {
       final carBrandList = await carBrandRepository.getCarBrandList();
+      emit(state.copyWith(carBrandList: carBrandList));
+    } catch (e) {
+      emit(CarBrandError(message: "Error fetching data"));
+    }
+  }
+
+  _onGetCarBrandSearchedEvent(
+      GetCarBrandSearchedEvent event, Emitter<CarBrandState> emit) async {
+    emit(CarBrandLoading());
+    try {
+      final carBrandList = await carBrandRepository.getCarBrandSearchedList(event.searchedText);
       emit(state.copyWith(carBrandList: carBrandList));
     } catch (e) {
       emit(CarBrandError(message: "Error fetching data"));

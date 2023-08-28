@@ -13,3 +13,12 @@ class GetCarBrandEvent extends CarBrandEvent {
   @override
   List<Object> get props => [];
 }
+
+class GetCarBrandSearchedEvent extends CarBrandEvent {
+  final String searchedText;
+  const GetCarBrandSearchedEvent(this.searchedText);
+
+  @override
+  List<Object> get props => [searchedText];
+}
+
