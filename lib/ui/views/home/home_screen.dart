@@ -33,14 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
         height: 812.h,
         child: Scaffold(
           backgroundColor: ColorProvider.mainBackground,
+          appBar: reusableAppBar("Find your car brand"),
           body: SafeArea(
             child: Column(
               children: [
-                Container(
-                  margin:
-                      EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
-                  child: reusableText("Find your car brand"),
-                ),
                 Container(
                   width: 375.w,
                   margin:

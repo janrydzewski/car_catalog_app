@@ -14,10 +14,17 @@ reusableText(String text,
   return Text(
     text,
     textAlign: textAlign,
-    style: GoogleFonts.poppins(
+    style: GoogleFonts.notoSans(
         fontSize: fontSize.sp,
         color: fontColor,
         fontWeight: fontWeight,
         letterSpacing: letterSpacing),
+  );
+}
+
+reusableAppBar(String text) {
+  return AppBar(
+    title: reusableText(text),
+    centerTitle: true,
   );
 }

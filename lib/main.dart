@@ -47,6 +47,23 @@ class MyApp extends StatelessWidget {
           designSize: const Size(375, 812),
           builder: (context, state) {
             return MaterialApp.router(
+              builder: (context, child) {
+                return ScrollConfiguration(
+                  behavior: DisableGlow(),
+                  child: child!,
+                );
+              },
+              theme: ThemeData(
+                brightness: Brightness.light,
+                scaffoldBackgroundColor: ColorProvider.mainBackground,
+                appBarTheme: const AppBarTheme(
+                  elevation: 0,
+                  backgroundColor: ColorProvider.mainBackground,
+                  iconTheme: IconThemeData(
+                    color: ColorProvider.mainText,
+                  ),
+                ),
+              ),
               debugShowCheckedModeBanner: false,
               routeInformationProvider: router.routeInformationProvider,
               routeInformationParser: router.routeInformationParser,
