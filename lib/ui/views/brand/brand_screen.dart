@@ -3,7 +3,6 @@ import 'package:car_catalog/resources/resources.dart';
 import 'package:car_catalog/ui/widgets/brand/brand.dart';
 import 'package:car_catalog/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BrandScreen extends StatefulWidget {
@@ -39,7 +38,7 @@ class _BrandScreenState extends State<BrandScreen> {
               Expanded(
                 child: Container(
                   margin: EdgeInsets.only(top: 15.h, bottom: 45.h),
-                  child: reusableListView(widget.brandModel.modelList),
+                  child: reusableListView(widget.brandModel, widget.brandModel.modelList),
                 ),
 
               ),
