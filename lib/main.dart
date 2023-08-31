@@ -15,8 +15,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Hive.initFlutter();
-  await Hive.openBox("favourite_models");
   Hive.registerAdapter(FavouriteModelAdapter());
+  await Hive.openBox("favourite_models");
 
   MyRouter myRouter = MyRouter();
 
@@ -37,6 +37,9 @@ class MyApp extends StatelessWidget {
         RepositoryProvider(
           create: (context) => const CarBrandRepository(),
         ),
+        RepositoryProvider(
+          create: (context) => const FavouriteListRepository(),
+        ),
       ],
       child: MultiBlocProvider(
         providers: [
@@ -47,6 +50,16 @@ class MyApp extends StatelessWidget {
             create: (context) => CarBrandBloc(
                 carBrandRepository:
                     RepositoryProvider.of<CarBrandRepository>(context)),
+          ),
+          BlocProvider(
+            create: (context) => FavouriteListBloc(
+                favouriteListRepository:
+                    RepositoryProvider.of<FavouriteListRepository>(context)),
+          ),
+          BlocProvider(
+            create: (context) => FavouriteBloc(
+                favouriteListRepository:
+                    RepositoryProvider.of<FavouriteListRepository>(context)),
           ),
         ],
         child: ScreenUtilInit(

@@ -1,0 +1,1 @@
+export 'favourite_models.dart';

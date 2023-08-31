@@ -2,11 +2,13 @@ class ModelModel {
   final int id;
   final String model;
   final String url;
+  bool isFavourite;
 
-  const ModelModel({
+  ModelModel({
     required this.id,
     required this.model,
     required this.url,
+    this.isFavourite = false,
   });
 
   Map<String, dynamic> toJson() {
@@ -14,6 +16,7 @@ class ModelModel {
       'id': id,
       'model': model,
       'url': url,
+      'isFavourite': false,
     };
   }
 
@@ -22,6 +25,7 @@ class ModelModel {
       id: map['id'] as int,
       model: map['model'] as String,
       url: map['url'] as String,
+      isFavourite: false,
     );
   }
 }

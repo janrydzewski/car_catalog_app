@@ -45,12 +45,7 @@ class MyRouter {
             path: '/favourite',
             pageBuilder: (context, state) {
               return const NoTransitionPage(
-                child: Center(
-                  child: Text(
-                    "Favourite",
-                    style: TextStyle(color: ColorProvider.mainText),
-                  ),
-                ),
+                child: FavouriteScreen(),
               );
             },
           ),

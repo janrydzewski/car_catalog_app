@@ -29,6 +29,7 @@ class BrandModel {
         id: model['id'] as int,
         model: model['model'] as String,
         url: model['url'] as String,
+        isFavourite: false,
       ));
     }
 
