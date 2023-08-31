@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 reusableText(String text,
     {double fontSize = 24,
-    Color fontColor = ColorProvider.mainText,
+    Color fontColor = ColorProvider.mainTextLight,
     FontWeight fontWeight = FontWeight.w500,
     double letterSpacing = 0,
     TextAlign textAlign = TextAlign.start}) {
@@ -29,38 +29,38 @@ reusableAppBar(String text) {
 }
 
 reusableSearchBar(TextEditingController textEditingController, Function() func,
-    Function(String value) func1) {
+    Function(String value) func1, bool isDarkMode) {
   return Container(
     width: 375.w,
     margin: EdgeInsets.symmetric(horizontal: 30.w, vertical: 15.h),
     child: TextFormField(
       controller: textEditingController,
-      cursorColor: ColorProvider.fourthElement,
+      cursorColor: isDarkMode ? ColorProvider.secondaryElementDark : ColorProvider.secondaryElementLight,
       decoration: InputDecoration(
         hintText: "Search",
         border: InputBorder.none,
-        hoverColor: ColorProvider.fourthElement,
-        enabledBorder: const UnderlineInputBorder(
+        hoverColor: isDarkMode ? ColorProvider.secondaryElementDark : ColorProvider.secondaryElementLight,
+        enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
             width: 1,
-            color: ColorProvider.fourthElement,
+            color: isDarkMode ? ColorProvider.secondaryElementDark : ColorProvider.secondaryElementLight,
           ),
         ),
-        focusedBorder: const UnderlineInputBorder(
+        focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(
             width: 1,
-            color: ColorProvider.fourthElement,
+            color: isDarkMode ? ColorProvider.secondaryElementDark : ColorProvider.secondaryElementLight,
           ),
         ),
         hintStyle: GoogleFonts.notoSans(
           fontSize: 16,
           fontWeight: FontWeight.w600,
-          color: ColorProvider.secondaryText,
+          color: isDarkMode ? ColorProvider.secondaryTextDark : ColorProvider.secondaryTextLight,
           letterSpacing: 1,
         ),
         suffixIcon: IconButton(
           onPressed: func,
-          icon: const Icon(Icons.close, color: ColorProvider.mainText),
+          icon:  Icon(Icons.close, color: isDarkMode ? ColorProvider.mainTextDark : ColorProvider.mainTextLight),
         ),
       ),
       onChanged: func1,

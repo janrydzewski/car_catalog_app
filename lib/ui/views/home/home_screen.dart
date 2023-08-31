@@ -23,6 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final state = context.read<ThemeCubit>().state;
+    final isDarkMode = state == Brightness.dark;
     return GestureDetector(
       onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
@@ -31,7 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 375.w,
         height: 812.h,
         child: Scaffold(
-          backgroundColor: ColorProvider.mainBackground,
+          backgroundColor: isDarkMode
+              ? ColorProvider.mainBackgroundDark
+              : ColorProvider.mainBackgroundLight,
           appBar: reusableAppBar("Find your car brand"),
           body: SafeArea(
             child: Column(
@@ -46,15 +50,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     context.read<CarBrandBloc>().add(
                           GetCarBrandSearchedEvent(value),
                         );
-                  },
+                  }, isDarkMode
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
-                  margin: EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
+                  margin:
+                      EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
                   child: reusableText(
                     "All brands",
                     fontSize: 16,
-                    fontColor: ColorProvider.thirdText,
+                    fontColor: isDarkMode
+                        ? ColorProvider.thirdTextDark
+                        : ColorProvider.thirdTextLight,
                     fontWeight: FontWeight.w600,
                     letterSpacing: 1,
                   ),
@@ -66,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         return const CircularProgressIndicator();
                       } else {
                         final carBrandList = state.carBrandList;
-                        return reusableGridView(carBrandList);
+                        return reusableGridView(carBrandList, isDarkMode);
                       }
                     },
                   ),

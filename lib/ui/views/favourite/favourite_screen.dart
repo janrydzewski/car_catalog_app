@@ -21,11 +21,15 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final state = context.read<ThemeCubit>().state;
+    final isDarkMode = state == Brightness.dark;
     return SizedBox(
       width: 375.w,
       height: 812.h,
       child: Scaffold(
-        backgroundColor: ColorProvider.mainBackground,
+        backgroundColor: isDarkMode
+            ? ColorProvider.mainBackgroundDark
+            : ColorProvider.mainBackgroundLight,
         appBar: reusableAppBar("Favourite Models"),
         body: BlocBuilder<FavouriteListBloc, FavouriteListState>(
           builder: (context, state) {
@@ -34,11 +38,12 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
             } else {
               final favouriteList = state.favouriteList;
               return favouriteList.isNotEmpty
-                  ? reusableFavouriteListView(favouriteList)
+                  ? reusableFavouriteListView(favouriteList, isDarkMode)
                   : Container(
-                    alignment: Alignment.center,
+                      alignment: Alignment.center,
                       child: reusableText(
-                          "You don't have any liked models of cars yet", fontSize: 14),
+                          "You don't have any liked models of cars yet",
+                          fontSize: 14),
                     );
             }
           },

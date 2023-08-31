@@ -8,6 +8,8 @@ import 'package:go_router/go_router.dart';
 Widget bottomNavigationBarWidget() {
   return BlocBuilder<ApplicationBloc, ApplicationState>(
     builder: (context, state) {
+      final state = context.read<ThemeCubit>().state;
+      final isDarkMode = state == Brightness.dark;
       return Theme(
         data: ThemeData(
           splashColor: Colors.transparent,
@@ -16,9 +18,11 @@ Widget bottomNavigationBarWidget() {
         child: Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 15.h),
-          decoration: const BoxDecoration(
-              color: ColorProvider.fourthElement,
-              borderRadius: BorderRadius.all(Radius.circular(30))),
+          decoration: BoxDecoration(
+              color: isDarkMode
+                  ? ColorProvider.secondaryElementDark
+                  : ColorProvider.secondaryElementLight,
+              borderRadius: const BorderRadius.all(Radius.circular(30))),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -74,4 +78,3 @@ Widget bottomNavigationBarWidget() {
     },
   );
 }
-

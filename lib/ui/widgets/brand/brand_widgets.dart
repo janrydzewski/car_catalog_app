@@ -1,5 +1,4 @@
 import 'package:car_catalog/bloc/bloc.dart';
-import 'package:car_catalog/bloc/blocs/favourite/bloc/favourite_bloc.dart';
 import 'package:car_catalog/data/models/models.dart';
 import 'package:car_catalog/repositories/repositories.dart';
 import 'package:car_catalog/resources/resources.dart';
@@ -13,7 +12,8 @@ reusableListView(BrandModel brandModel, List<ModelModel> modelList) {
     padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
     child: ListView.builder(
       itemBuilder: (context, index) {
-        return ListViewItem(brandModel: brandModel, modelModel: modelList[index]);
+        return ListViewItem(
+            brandModel: brandModel, modelModel: modelList[index]);
       },
       itemCount: modelList.length,
     ),
@@ -23,7 +23,8 @@ reusableListView(BrandModel brandModel, List<ModelModel> modelList) {
 class ListViewItem extends StatefulWidget {
   final BrandModel brandModel;
   final ModelModel modelModel;
-  const ListViewItem({super.key, required this.brandModel, required this.modelModel});
+  const ListViewItem(
+      {super.key, required this.brandModel, required this.modelModel});
 
   @override
   State<ListViewItem> createState() => _ListViewItemState();
@@ -38,12 +39,14 @@ class _ListViewItemState extends State<ListViewItem> {
         favouriteListRepository:
             RepositoryProvider.of<FavouriteListRepository>(context));
     favouriteBloc.add(GetInitialValueEvent(widget.modelModel));
-    
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    final state = context.read<ThemeCubit>().state;
+    final isDarkMode = state == Brightness.dark;
     return BlocBuilder<FavouriteBloc, FavouriteState>(
       bloc: favouriteBloc,
       builder: (context, state) {
@@ -58,7 +61,9 @@ class _ListViewItemState extends State<ListViewItem> {
                 padding: const EdgeInsets.all(10),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                    color: ColorProvider.thirdElement,
+                    color: isDarkMode
+                        ? ColorProvider.mainElementDark
+                        : ColorProvider.mainElementLight,
                     borderRadius: BorderRadius.circular(25)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -77,7 +82,8 @@ class _ListViewItemState extends State<ListViewItem> {
                 top: 0,
                 child: GestureDetector(
                   onTap: () {
-                    favouriteBloc.add(AddRemoveModelEvent(widget.brandModel, widget.modelModel));
+                    favouriteBloc.add(AddRemoveModelEvent(
+                        widget.brandModel, widget.modelModel));
                     print(
                         "current: ${widget.modelModel.model}  ${widget.modelModel.isFavourite}");
                   },
@@ -86,12 +92,22 @@ class _ListViewItemState extends State<ListViewItem> {
                     height: 30.w,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: ColorProvider.thirdElement,
-                      border: Border.all(color: ColorProvider.fourthElement),
+                      color: isDarkMode
+                          ? ColorProvider.mainElementDark
+                          : ColorProvider.mainElementLight,
+                      border: Border.all(
+                          color: isDarkMode
+                              ? ColorProvider.secondaryElementDark
+                              : ColorProvider.secondaryElementLight),
                     ),
-                    child: Icon(state.isFavourite
-                        ? Icons.favorite
-                        : Icons.favorite_outline),
+                    child: Icon(
+                      state.isFavourite
+                          ? Icons.favorite
+                          : Icons.favorite_outline,
+                      color: isDarkMode
+                          ? ColorProvider.mainTextDark
+                          : ColorProvider.mainTextLight,
+                    ),
                   ),
                 ),
               ),

@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 
-reusableGridView(List<BrandModel> carBrandList) {
+reusableGridView(List<BrandModel> carBrandList, bool isDarkMode) {
   return Padding(
     padding: EdgeInsets.symmetric(
         vertical: 5.h, horizontal: 20.w),
@@ -21,7 +21,7 @@ reusableGridView(List<BrandModel> carBrandList) {
             padding: const EdgeInsets.all(10),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: ColorProvider.thirdElement,
+                color: isDarkMode ? ColorProvider.mainElementDark : ColorProvider.mainElementLight,
                 borderRadius: BorderRadius.circular(20)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

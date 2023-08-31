@@ -1,11 +1,15 @@
 import 'package:car_catalog/data/models/models.dart';
 import 'package:car_catalog/repositories/repositories.dart';
 import 'package:car_catalog/resources/resources.dart';
+import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'bloc/bloc.dart';
 import 'routes/routes.dart';
@@ -13,6 +17,11 @@ import 'routes/routes.dart';
 void main() async {
   Bloc.observer = MyBlocObserver();
   WidgetsFlutterBinding.ensureInitialized();
+
+  HydratedBloc.storage = await HydratedStorage.build(
+      storageDirectory: kIsWeb
+          ? HydratedStorage.webStorageDirectory
+          : await getTemporaryDirectory());
 
   await Hive.initFlutter();
   Hive.registerAdapter(FavouriteModelAdapter());
@@ -61,32 +70,39 @@ class MyApp extends StatelessWidget {
                 favouriteListRepository:
                     RepositoryProvider.of<FavouriteListRepository>(context)),
           ),
+          BlocProvider(create: (context) => ThemeCubit()),
         ],
         child: ScreenUtilInit(
           designSize: const Size(375, 812),
           builder: (context, state) {
-            return MaterialApp.router(
-              builder: (context, child) {
-                return ScrollConfiguration(
-                  behavior: DisableGlow(),
-                  child: child!,
+            return BlocBuilder<ThemeCubit, Brightness>(
+              builder: (context, state) {
+                final isDarkMode = state == Brightness.dark;
+                return MaterialApp.router(
+                  builder: (context, child) {
+                    return ScrollConfiguration(
+                      behavior: DisableGlow(),
+                      child: child!,
+                    );
+                  },
+                  theme: isDarkMode ? darkTheme : lightTheme,
+                  // theme: ThemeData(
+                  //   brightness: Brightness.light,
+                  //   scaffoldBackgroundColor: ColorProvider.mainBackgroundLight,
+                  //   appBarTheme: const AppBarTheme(
+                  //     elevation: 0,
+                  //     backgroundColor: ColorProvider.mainBackgroundLight,
+                  //     iconTheme: IconThemeData(
+                  //       color: ColorProvider.mainTextLight,
+                  //     ),
+                  //   ),
+                  // ),
+                  debugShowCheckedModeBanner: false,
+                  routeInformationProvider: router.routeInformationProvider,
+                  routeInformationParser: router.routeInformationParser,
+                  routerDelegate: router.routerDelegate,
                 );
               },
-              theme: ThemeData(
-                brightness: Brightness.light,
-                scaffoldBackgroundColor: ColorProvider.mainBackground,
-                appBarTheme: const AppBarTheme(
-                  elevation: 0,
-                  backgroundColor: ColorProvider.mainBackground,
-                  iconTheme: IconThemeData(
-                    color: ColorProvider.mainText,
-                  ),
-                ),
-              ),
-              debugShowCheckedModeBanner: false,
-              routeInformationProvider: router.routeInformationProvider,
-              routeInformationParser: router.routeInformationParser,
-              routerDelegate: router.routerDelegate,
             );
           },
         ),

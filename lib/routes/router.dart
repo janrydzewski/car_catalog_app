@@ -57,7 +57,7 @@ class MyRouter {
                 child: Center(
                   child: Text(
                     "Settings",
-                    style: TextStyle(color: ColorProvider.mainText),
+                    style: TextStyle(color: ColorProvider.mainTextLight),
                   ),
                 ),
               );

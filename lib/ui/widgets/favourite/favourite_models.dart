@@ -4,7 +4,7 @@ import 'package:car_catalog/ui/ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-reusableFavouriteListView(List<FavouriteModel> favouriteList) {
+reusableFavouriteListView(List<FavouriteModel> favouriteList, bool isDarkMode) {
   return Padding(
     padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
     child: ListView.builder(
@@ -17,7 +17,9 @@ reusableFavouriteListView(List<FavouriteModel> favouriteList) {
               padding: const EdgeInsets.all(10),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: ColorProvider.thirdElement,
+                  color: isDarkMode
+                      ? ColorProvider.mainElementDark
+                      : ColorProvider.mainElementLight,
                   borderRadius: BorderRadius.circular(25)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -47,10 +49,20 @@ reusableFavouriteListView(List<FavouriteModel> favouriteList) {
                   height: 30.w,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: ColorProvider.thirdElement,
-                    border: Border.all(color: ColorProvider.fourthElement),
+                    color: isDarkMode
+                        ? ColorProvider.mainElementDark
+                        : ColorProvider.mainElementLight,
+                    border: Border.all(
+                        color: isDarkMode
+                            ? ColorProvider.secondaryElementDark
+                            : ColorProvider.secondaryElementLight),
                   ),
-                  child: const Icon(Icons.favorite),
+                  child: Icon(
+                    Icons.favorite,
+                    color: isDarkMode
+                        ? ColorProvider.mainTextDark
+                        : ColorProvider.mainTextLight,
+                  ),
                 ),
               ),
             )
