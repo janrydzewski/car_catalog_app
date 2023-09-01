@@ -23,3 +23,11 @@ class AddRemoveModelEvent extends FavouriteEvent {
   @override
   List<Object> get props => [brandModel, modelModel];
 }
+
+class RemoveModelFromFavouriteEvent extends FavouriteEvent {
+  final String modelName;
+  const RemoveModelFromFavouriteEvent(this.modelName);
+
+  @override
+  List<Object> get props => [modelName];
+}

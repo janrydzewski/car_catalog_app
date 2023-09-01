@@ -20,6 +20,14 @@ class _BrandScreenState extends State<BrandScreen> {
   final TextEditingController textEditingController = TextEditingController();
 
   @override
+  void initState() {
+    context
+        .read<ModelListBloc>()
+        .add(GetModelListEvent(widget.brandModel.modelList));
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final state = context.read<ThemeCubit>().state;
     final isDarkMode = state == Brightness.dark;
@@ -27,25 +35,38 @@ class _BrandScreenState extends State<BrandScreen> {
       width: 375.w,
       height: 812.h,
       child: Scaffold(
-        appBar: reusableAppBar(widget.brandModel.name),
+        appBar: reusableAppBar(
+          widget.brandModel.name,
+          isDarkMode ? ColorProvider.mainTextDark : ColorProvider.mainTextLight,
+        ),
         backgroundColor: isDarkMode
             ? ColorProvider.mainBackgroundDark
             : ColorProvider.mainBackgroundLight,
         body: SafeArea(
           child: Column(
             children: [
-              reusableSearchBar(
-                textEditingController,
-                () {
-                  textEditingController.clear();
-                },
-                (value) {},
-              ),
+              reusableSearchBar(textEditingController, () {
+                textEditingController.clear();
+                context
+                    .read<ModelListBloc>()
+                    .add(GetModelListEvent(widget.brandModel.modelList));
+              }, (value) {
+                context.read<ModelListBloc>().add(GetModelListSearchedEvent(
+                    value, widget.brandModel.modelList));
+              }, isDarkMode),
               Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(top: 15.h, bottom: 45.h),
-                  child: reusableListView(
-                      widget.brandModel, widget.brandModel.modelList),
+                child: BlocBuilder<ModelListBloc, ModelListState>(
+                  builder: (context, state) {
+                    if (state is ModelListLoading) {
+                      return const CircularProgressIndicator();
+                    } else {
+                      return Container(
+                        margin: EdgeInsets.only(top: 15.h, bottom: 45.h),
+                        child: reusableListView(
+                            widget.brandModel, state.modelList),
+                      );
+                    }
+                  },
                 ),
               ),
             ],

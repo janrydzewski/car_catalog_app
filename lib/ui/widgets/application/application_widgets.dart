@@ -8,8 +8,8 @@ import 'package:go_router/go_router.dart';
 Widget bottomNavigationBarWidget() {
   return BlocBuilder<ApplicationBloc, ApplicationState>(
     builder: (context, state) {
-      final state = context.read<ThemeCubit>().state;
-      final isDarkMode = state == Brightness.dark;
+      final stateTheme = context.read<ThemeCubit>().state;
+      final isDarkMode = stateTheme == Brightness.dark;
       return Theme(
         data: ThemeData(
           splashColor: Colors.transparent,
@@ -44,8 +44,8 @@ Widget bottomNavigationBarWidget() {
               IconButton(
                 icon: Icon(
                   state.index == 1
-                      ? Icons.favorite_outlined
-                      : Icons.favorite_outline_rounded,
+                      ? Icons.favorite_rounded
+                      : Icons.favorite_outline,
                   color: Colors.white,
                   size: 30,
                 ),

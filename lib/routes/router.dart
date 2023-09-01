@@ -1,5 +1,4 @@
 import 'package:car_catalog/data/models/models.dart';
-import 'package:car_catalog/resources/resources.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:car_catalog/ui/ui.dart';
@@ -54,12 +53,7 @@ class MyRouter {
             path: '/settings',
             pageBuilder: (context, state) {
               return const NoTransitionPage(
-                child: Center(
-                  child: Text(
-                    "Settings",
-                    style: TextStyle(color: ColorProvider.mainTextLight),
-                  ),
-                ),
+                child: SettingsScreen(),
               );
             },
           ),

@@ -1,1 +1,1 @@
-export 'favourite_models.dart';
+export 'favourite_widgets.dart';

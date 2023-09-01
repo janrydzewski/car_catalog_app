@@ -8,8 +8,19 @@ class ModelListEvent extends Equatable {
 }
 
 class GetModelListEvent extends ModelListEvent {
-  const GetModelListEvent();
+  final List<ModelModel> modelList;
+
+  const GetModelListEvent(this.modelList);
 
   @override
   List<Object> get props => [];
+}
+
+class GetModelListSearchedEvent extends ModelListEvent {
+  final String searchedText;
+  final List<ModelModel> modelList;
+  const GetModelListSearchedEvent(this.searchedText, this.modelList);
+
+  @override
+  List<Object> get props => [searchedText, modelList];
 }

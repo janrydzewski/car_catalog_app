@@ -36,7 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: isDarkMode
               ? ColorProvider.mainBackgroundDark
               : ColorProvider.mainBackgroundLight,
-          appBar: reusableAppBar("Find your car brand"),
+          appBar: reusableAppBar(
+              "Find your car brand",
+              isDarkMode
+                  ? ColorProvider.mainTextDark
+                  : ColorProvider.mainTextLight,
+            ),
           body: SafeArea(
             child: Column(
               children: [

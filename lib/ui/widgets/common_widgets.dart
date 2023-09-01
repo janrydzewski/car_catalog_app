@@ -21,9 +21,9 @@ reusableText(String text,
   );
 }
 
-reusableAppBar(String text) {
+reusableAppBar(String text, fontColor) {
   return AppBar(
-    title: reusableText(text),
+    title: reusableText(text, fontColor: fontColor),
     centerTitle: true,
   );
 }

@@ -57,6 +57,7 @@ class _ListViewItemState extends State<ListViewItem> {
             children: [
               Container(
                 height: 120.h,
+                width: 375.w,
                 margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
                 padding: const EdgeInsets.all(10),
                 alignment: Alignment.center,
@@ -73,7 +74,16 @@ class _ListViewItemState extends State<ListViewItem> {
                       child: Image.network(
                           "https://www.pngarts.com/files/11/Audi-A6-PNG-Image.png"),
                     ),
-                    reusableText(widget.modelModel.model, fontSize: 15),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        child: reusableText(widget.modelModel.model,
+                            fontSize: 15,
+                            fontColor: isDarkMode
+                                ? ColorProvider.mainTextDark
+                                : ColorProvider.mainTextLight),
+                      ),
+                    ),
                   ],
                 ),
               ),

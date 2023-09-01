@@ -33,4 +33,17 @@ class CarBrandRepository {
 
     return searchedCarBrandList;
   }
+
+  Future<List<ModelModel>> getModelSearchedList(String searchingText, List<ModelModel> carModelList) async {
+
+    final List<ModelModel> searchedModelList = [];
+
+    for (var car in carModelList) {
+      if (car.model.toLowerCase().contains(searchingText.toLowerCase())) {
+        searchedModelList.add(car);
+      }
+    }
+
+    return searchedModelList;
+  }
 }

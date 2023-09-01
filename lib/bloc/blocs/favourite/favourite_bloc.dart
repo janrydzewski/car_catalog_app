@@ -11,6 +11,7 @@ class FavouriteBloc extends Bloc<FavouriteEvent, FavouriteState> {
   FavouriteBloc({required this.favouriteListRepository}) : super(FavouriteState()) {
     on<GetInitialValueEvent>(_onGetInitialValueEvent);
     on<AddRemoveModelEvent>(_onAddRemoveModelEvent);
+    on<RemoveModelFromFavouriteEvent>(_onRemoveModelFromFavouriteEvent);
   }
 
   _onGetInitialValueEvent(GetInitialValueEvent event, Emitter<FavouriteState> emit) async {
@@ -28,7 +29,7 @@ class FavouriteBloc extends Bloc<FavouriteEvent, FavouriteState> {
     try {
       final isFavourite = await favouriteListRepository.isOnFavouriteList(event.modelModel);
       if(isFavourite){
-        favouriteListRepository.deleteModelFromFavourite(event.brandModel, event.modelModel);
+        favouriteListRepository.deleteModelFromFavourite(event.modelModel.model);
 
         print("delete");
       }
@@ -37,6 +38,17 @@ class FavouriteBloc extends Bloc<FavouriteEvent, FavouriteState> {
         print("add");
       }
       emit(state.copyWith(isFavourite: !isFavourite));
+    } catch (e) {
+      emit(FavouriteError(message: "Error fetching data"));
+    }
+  }
+
+  _onRemoveModelFromFavouriteEvent(RemoveModelFromFavouriteEvent event, Emitter<FavouriteState> emit) async {
+    emit(FavouriteLoading());
+    try {
+      favouriteListRepository.deleteModelFromFavourite(event.modelName);
+
+      emit(state.copyWith(isFavourite: false));
     } catch (e) {
       emit(FavouriteError(message: "Error fetching data"));
     }

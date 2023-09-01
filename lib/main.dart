@@ -61,6 +61,11 @@ class MyApp extends StatelessWidget {
                     RepositoryProvider.of<CarBrandRepository>(context)),
           ),
           BlocProvider(
+            create: (context) => ModelListBloc(
+                carBrandRepository:
+                    RepositoryProvider.of<CarBrandRepository>(context)),
+          ),
+          BlocProvider(
             create: (context) => FavouriteListBloc(
                 favouriteListRepository:
                     RepositoryProvider.of<FavouriteListRepository>(context)),

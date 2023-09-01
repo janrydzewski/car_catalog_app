@@ -31,12 +31,12 @@ class FavouriteListRepository {
         name: brandModel.name, model: modelModel.model, url: modelModel.url));
   }
 
-  void deleteModelFromFavourite(BrandModel brandModel, ModelModel modelModel) {
+  void deleteModelFromFavourite(String modelName) {
     final favouriteModels = Hive.box("favourite_models");
 
     for (int i = 0; i < favouriteModels.length; i++) {
       final model = favouriteModels.getAt(i) as FavouriteModel;
-      if (model.model == modelModel.model) {
+      if (model.model == modelName) {
         favouriteModels.deleteAt(i);
       }
     }

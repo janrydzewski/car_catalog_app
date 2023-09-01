@@ -1,7 +1,10 @@
+import 'package:car_catalog/bloc/bloc.dart';
+import 'package:car_catalog/bloc/blocs/favourite/favourite_bloc.dart';
 import 'package:car_catalog/data/models/models.dart';
 import 'package:car_catalog/resources/resources.dart';
 import 'package:car_catalog/ui/ui.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 reusableFavouriteListView(List<FavouriteModel> favouriteList, bool isDarkMode) {
@@ -13,6 +16,7 @@ reusableFavouriteListView(List<FavouriteModel> favouriteList, bool isDarkMode) {
           children: [
             Container(
               height: 120.h,
+              width: 375.w,
               margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
               padding: const EdgeInsets.all(10),
               alignment: Alignment.center,
@@ -29,12 +33,25 @@ reusableFavouriteListView(List<FavouriteModel> favouriteList, bool isDarkMode) {
                     child: Image.network(
                         "https://www.pngarts.com/files/11/Audi-A6-PNG-Image.png"),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      reusableText(favouriteList[index].name, fontSize: 18),
-                      reusableText(favouriteList[index].model, fontSize: 15),
-                    ],
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          reusableText(favouriteList[index].name,
+                              fontSize: 18,
+                              fontColor: isDarkMode
+                                  ? ColorProvider.mainTextDark
+                                  : ColorProvider.mainTextLight),
+                          reusableText(favouriteList[index].model,
+                              fontSize: 15,
+                              fontColor: isDarkMode
+                                  ? ColorProvider.mainTextDark
+                                  : ColorProvider.mainTextLight),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -43,7 +60,14 @@ reusableFavouriteListView(List<FavouriteModel> favouriteList, bool isDarkMode) {
               right: 0,
               top: 0,
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  context.read<FavouriteBloc>().add(
+                      RemoveModelFromFavouriteEvent(
+                          favouriteList[index].model));
+                  context
+                      .read<FavouriteListBloc>()
+                      .add(const GetFavouriteListEvent());
+                },
                 child: Container(
                   width: 30.w,
                   height: 30.w,
