@@ -43,6 +43,7 @@ class _ListViewItemState extends State<ListViewItem> {
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
     final state = context.read<ThemeCubit>().state;
@@ -51,7 +52,7 @@ class _ListViewItemState extends State<ListViewItem> {
       bloc: favouriteBloc,
       builder: (context, state) {
         if (state is FavouriteLoading) {
-          return CircularProgressIndicator();
+          return CircularProgressIndicator(color: isDarkMode ? ColorProvider.mainElementDark : ColorProvider.mainElementLight,);
         } else {
           return Stack(
             children: [

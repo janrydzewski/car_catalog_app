@@ -38,7 +38,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
           child: BlocBuilder<FavouriteListBloc, FavouriteListState>(
             builder: (context, state) {
               if (state is FavouriteListLoading) {
-                return const CircularProgressIndicator();
+                return CircularProgressIndicator(color: isDarkMode ? ColorProvider.mainElementDark : ColorProvider.mainElementLight,);
               } else {
                 final favouriteList = state.favouriteList;
                 return favouriteList.isNotEmpty

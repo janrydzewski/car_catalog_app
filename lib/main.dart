@@ -91,17 +91,6 @@ class MyApp extends StatelessWidget {
                     );
                   },
                   theme: isDarkMode ? darkTheme : lightTheme,
-                  // theme: ThemeData(
-                  //   brightness: Brightness.light,
-                  //   scaffoldBackgroundColor: ColorProvider.mainBackgroundLight,
-                  //   appBarTheme: const AppBarTheme(
-                  //     elevation: 0,
-                  //     backgroundColor: ColorProvider.mainBackgroundLight,
-                  //     iconTheme: IconThemeData(
-                  //       color: ColorProvider.mainTextLight,
-                  //     ),
-                  //   ),
-                  // ),
                   debugShowCheckedModeBanner: false,
                   routeInformationProvider: router.routeInformationProvider,
                   routeInformationParser: router.routeInformationParser,

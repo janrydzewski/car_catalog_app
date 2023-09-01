@@ -58,7 +58,11 @@ class _BrandScreenState extends State<BrandScreen> {
                 child: BlocBuilder<ModelListBloc, ModelListState>(
                   builder: (context, state) {
                     if (state is ModelListLoading) {
-                      return const CircularProgressIndicator();
+                      return CircularProgressIndicator(
+                        color: isDarkMode
+                            ? ColorProvider.mainElementDark
+                            : ColorProvider.mainElementLight,
+                      );
                     } else {
                       return Container(
                         margin: EdgeInsets.only(top: 15.h, bottom: 45.h),

@@ -37,26 +37,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ? ColorProvider.mainBackgroundDark
               : ColorProvider.mainBackgroundLight,
           appBar: reusableAppBar(
-              "Find your car brand",
-              isDarkMode
-                  ? ColorProvider.mainTextDark
-                  : ColorProvider.mainTextLight,
-            ),
+            "Find your car brand",
+            isDarkMode
+                ? ColorProvider.mainTextDark
+                : ColorProvider.mainTextLight,
+          ),
           body: SafeArea(
             child: Column(
               children: [
-                reusableSearchBar(
-                  textEditingController,
-                  () {
-                    textEditingController.clear();
-                    context.read<CarBrandBloc>().add(const GetCarBrandEvent());
-                  },
-                  (value) {
-                    context.read<CarBrandBloc>().add(
-                          GetCarBrandSearchedEvent(value),
-                        );
-                  }, isDarkMode
-                ),
+                reusableSearchBar(textEditingController, () {
+                  textEditingController.clear();
+                  context.read<CarBrandBloc>().add(const GetCarBrandEvent());
+                }, (value) {
+                  context.read<CarBrandBloc>().add(
+                        GetCarBrandSearchedEvent(value),
+                      );
+                }, isDarkMode),
                 Container(
                   alignment: Alignment.centerLeft,
                   margin:
@@ -75,7 +71,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: BlocBuilder<CarBrandBloc, CarBrandState>(
                     builder: (context, state) {
                       if (state is CarBrandLoading) {
-                        return const CircularProgressIndicator();
+                        return CircularProgressIndicator(
+                          color: isDarkMode
+                              ? ColorProvider.mainElementDark
+                              : ColorProvider.mainElementLight,
+                        );
                       } else {
                         final carBrandList = state.carBrandList;
                         return reusableGridView(carBrandList, isDarkMode);
